@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake GPS PRO</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <style>
+    body { margin:0; font-family:Segoe UI; background:#0f172a; color:white; }
+    #topbar { padding:10px; display:flex; gap:8px; background:#111827; flex-wrap:wrap; }
+    input { padding:8px; border-radius:8px; border:none; }
+    button { padding:8px 12px; border:none; border-radius:8px; background:#22c55e; color:white; cursor:pointer; }
+    #map { height: calc(100vh - 70px); }
+  </style>
+</head>
+
+<body>
+
+<div id="topbar">
+  <input id="search" placeholder="Cari lokasi">
+  <button onclick="searchLocation()">Cari</button>
+
+  <button onclick="random()">Random</button>
+  <button onclick="autoMove()">Auto Move</button>
+
+  <span id="uid"></span>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+<script src="panel.js"></script>
+
+</body>
+</html>
